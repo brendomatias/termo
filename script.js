@@ -62,14 +62,6 @@ function addButtaoLetras(){
     letra.classList.add("letras");
     divLetra.appendChild(letra)
   }
-  // butao sair
-  let sair = document.createElement("button");
-  sair.innerHTML = "enviar"
-  sair.addEventListener("click",() =>{
-    adivinhar();
-  })
-  sair.classList.add("enviar");
-  divLetra.appendChild(sair)
 // butao voltar
   let voltar = document.createElement("button");
   voltar.innerHTML = "voltar"
@@ -78,7 +70,14 @@ function addButtaoLetras(){
   })
   voltar.classList.add("voltar");
   divLetra.appendChild(voltar)
-
+  // butao sair
+  let sair = document.createElement("button");
+  sair.innerHTML = "enviar"
+  sair.addEventListener("click",() =>{
+    adivinhar();
+  })
+  sair.classList.add("enviar");
+  divLetra.appendChild(sair)
 }
 
 // gerar os butões parte de cima
@@ -170,7 +169,7 @@ function mudarTela(valor){
   document.querySelector(".resultado").style.display = "grid";
   resultado =  document.querySelector(".descricaoFinal");
   if(valor == true){
-   resultado.innerHTML = `você ganhou </br> a palavra era: ${plsecreta[coluna][linha]}`
+   resultado.innerHTML = `você ganhou +10 </br> a palavra era: ${plsecreta[coluna][linha]}`
   }
   else{
     resultado.innerHTML = `você perdeu </br> a palavra era: ${plsecreta[coluna][linha]}`
