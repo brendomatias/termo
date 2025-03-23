@@ -1,0 +1,129 @@
+body{
+    margin: 0;
+  }
+  .conteudo{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    gap: 1rem;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    background: linear-gradient(to left top,blue,rgb(24, 24, 155),rgb(37, 37, 82));
+    .titulo{
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 5rem;
+        margin: 0;
+      }
+    .tentativa{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        .tentativaLinha{
+            display: flex;
+            height: 5rem;
+            width: 25rem;
+            justify-content: center;
+            .tentativasLetra{
+                width: 5rem;
+                height: 6rem;
+            }
+            .tentativasLetra:hover{
+                background-color: rgb(113, 113, 113);
+            }
+        }
+    }
+    .linha{
+        width: 25rem;
+        height: 0.1rem;
+        background-color: rgb(255, 255, 255);
+      
+      }
+    .opcoes{
+        display: flex;
+        flex-wrap: wrap;
+        width: 34rem;
+        column-gap: 0.3rem;
+        row-gap: 0.3rem;
+        justify-content: center;
+
+        .letras{
+            width: 3rem;
+            height: 5rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        .letras:hover,.enviar:hover{
+            background-color: rgb(120, 120, 120);
+        }
+    }
+
+}
+  
+.letras,.tentativasLetra,.enviar{
+    color: white;
+    background-color: rgb(48, 48, 48);
+    border:  1px solid rgb(93, 92, 92);
+    font-size: 2rem;
+    transition: 0.6s;
+}
+  
+  
+.tentativasLetra{
+    width: 5rem;
+}
+
+.enviar{
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.trancado{
+    position:relative;
+    
+}
+
+
+@media (max-width:500px){
+
+    .titulo{
+        font-size: 3rem !important;
+    }
+    .tentativa{
+        margin-bottom: 1rem;
+        gap: 1rem;
+    }
+    .opcoes{
+    width: 22rem !important;
+    column-gap: 0.3rem;
+    row-gap: 0.3rem;
+    justify-content: center;
+    }
+    .letras{
+    width: 2rem  !important;
+    height: 3rem !important;
+    font-size: 1rem;
+    border-radius: 0.1rem;
+
+    }
+    .enviar{
+    width: 10rem;
+    }
+    .tentativaLinha{
+    width: 20rem  !important;
+    height: 5rem !important;
+    font-size: 1rem;
+    border-radius: 0.1rem;
+    }
+}
+  
+  
+
+
+  
+  
+  
+  

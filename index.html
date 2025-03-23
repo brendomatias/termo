@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termo</title>
+    <link rel="stylesheet" href="/estilo/syle.css">
+    <link rel="icon" href="/icon.png">
+</head>
+<body>
+    <main >
+        <div  class="menu">
+            <div class="tela">
+                <h1 class="titulo">Termo</h1>
+                <p class="descricao">escolha a dificuldade</p>
+                <div class="butoesMenu">
+                    <button onclick="jogar(0)" class="escolhaDificuldade">4 letras</button>
+                    <button onclick="jogar(1)" class="escolhaDificuldade">5 letras</button>
+                    <button onclick="jogar(2)" class="escolhaDificuldade">6 letras</button>
+                </div>
+                <p class="linhaMenu"></p>
+                <p class="score">score:<span class="pontuacao">0</span></p>
+            </div>
+        </div>
+        <div  class="conteudo">
+            <h1 class="titulo">Termo</h1>
+            <div class="tentativa">
+            </div>
+            <span class="linha"></span>
+            <div class="opcoes"></div>
+        </div>
+        <div  class="resultado">
+            <div class="derrotaConteudo">
+            <h1 class="titulo">Termo</h1>
+            <p class="descricaoFinal"></p>
+            <button onclick="jogaNovamente()" class="opcoes jgnovamente">Jogar novamente</button>
+            <button onclick="voltarInicio()" class="opcoes voltarinicio">voltar para o inicio</button>
+            <p class="score">score: <span class="pontuacao">0</span></p>
+            </div>       
+        </div>
+          </main>
+</body>
+<script src="/script.js"></script>
+</html>
