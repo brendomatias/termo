@@ -37,6 +37,7 @@ body{
         }
     }
     .linha{
+        margin-top: 1rem;
         width: 25rem;
         height: 0.1rem;
         background-color: rgb(255, 255, 255);
@@ -49,6 +50,7 @@ body{
         column-gap: 0.3rem;
         row-gap: 0.3rem;
         justify-content: center;
+        background-color: transparent;
 
         .letras{
             width: 3rem;
@@ -56,14 +58,14 @@ body{
             border-radius: 0.5rem;
             cursor: pointer;
         }
-        .letras:hover,.enviar:hover{
+        .letras:hover,.enviar:hover,.voltar:hover{
             background-color: rgb(120, 120, 120);
         }
     }
 
 }
   
-.letras,.tentativasLetra,.enviar{
+.letras,.tentativasLetra,.enviar,.voltar{
     color: white;
     background-color: rgb(48, 48, 48);
     border:  1px solid rgb(93, 92, 92);
@@ -76,7 +78,7 @@ body{
     width: 5rem;
 }
 
-.enviar{
+.enviar,.voltar{
     border-radius: 0.5rem;
     cursor: pointer;
 }
@@ -86,21 +88,21 @@ body{
     
 }
 
-
 @media (max-width:500px){
-
+    .conteudo{
+        gap: 0.2rem;
+    }
     .titulo{
         font-size: 3rem !important;
     }
     .tentativa{
-        margin-bottom: 1rem;
-        gap: 1rem;
+        gap: 0rem;
     }
     .opcoes{
-    width: 22rem !important;
-    column-gap: 0.3rem;
-    row-gap: 0.3rem;
-    justify-content: center;
+        width:17rem !important;
+        column-gap: 0.3rem;
+        row-gap: 0.3rem;
+
     }
     .letras{
     width: 2rem  !important;
@@ -109,14 +111,24 @@ body{
     border-radius: 0.1rem;
 
     }
-    .enviar{
-    width: 10rem;
+    .enviar,.voltar{
+        width: 6rem;
+        font-size: 1.5rem;
     }
     .tentativaLinha{
-    width: 20rem  !important;
-    height: 5rem !important;
+        height: 4rem !important;
+        width: 100% !important;
+
+    }
+    .tentativasLetra{
+    width: 3rem  !important;
+    height: 4rem !important;
     font-size: 1rem;
     border-radius: 0.1rem;
+    }
+    .linha{
+        width: 15rem !important;
+        margin: 0.5rem 0;
     }
 }
   

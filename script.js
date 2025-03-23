@@ -62,6 +62,7 @@ function addButtaoLetras(){
     letra.classList.add("letras");
     divLetra.appendChild(letra)
   }
+  // butao sair
   let sair = document.createElement("button");
   sair.innerHTML = "enviar"
   sair.addEventListener("click",() =>{
@@ -69,6 +70,14 @@ function addButtaoLetras(){
   })
   sair.classList.add("enviar");
   divLetra.appendChild(sair)
+// butao voltar
+  let voltar = document.createElement("button");
+  voltar.innerHTML = "voltar"
+  voltar.addEventListener("click",() =>{
+    voltarInicio();
+  })
+  voltar.classList.add("voltar");
+  divLetra.appendChild(voltar)
 
 }
 

@@ -24,7 +24,7 @@
     .descricaoFinal,.palavaCerta{
         font-size: 2rem;
     }
-    .opcoes{
+    .opcoesResultado{
         margin: 0.3rem;
         padding: 1rem 2.5rem;
         border-radius: 0.5rem;
@@ -34,7 +34,7 @@
         border: 1px solid rgb(61, 61, 61);
         cursor: pointer;
     }
-    .opcoes:hover{
+    .opcoesResultado:hover{
         background-color: rgb(108, 107, 107);
     }
 }
@@ -58,13 +58,13 @@
     .descricaoFinal,.palavaCerta{
         font-size: 1rem;
     }
-    .opcoes{
+    .opcoesResultado{
         margin: 0.3rem;
         padding: 1rem 0rem !important;
         width: 17rem !important;
         font-size: 1rem;
     }
-    .opcoes:hover{
+    .opcoesResultado:hover{
         background-color: rgb(108, 107, 107);
     }
 }
