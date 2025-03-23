@@ -37,6 +37,10 @@ window.onload = function (){
   else{
     localStorage.setItem('pontos', potuacao);
 }
+atualizarTextoPontos()
+}
+
+function atualizarTextoPontos(){
   document.querySelectorAll(".pontuacao").forEach(score => {
     score.innerHTML = potuacao;
     
@@ -47,6 +51,7 @@ window.onload = function (){
 function atualizarPontos(){
   potuacao += 10;
   localStorage.setItem('pontos', potuacao);
+  atualizarTextoPontos()
 }
 // gerar os butões parte de baixo
 
