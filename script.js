@@ -8,7 +8,6 @@ let coluna = 0;
 let linha = 0;
 let tentativas = 5;
 
-
 //banco de dados de palavras
 let plsecreta = [
   // Palavras de 4 letras
@@ -122,7 +121,6 @@ function criarLista(){
   for(let i=0;i<4+opcaoJogo;i++){
     palavraLista.unshift("-1");
   }
-  console.log(palavraLista)
   
 }
 
@@ -139,10 +137,9 @@ function jogar(num){
   else{
     linha = Math.floor(Math.random() * plsecreta[2].length)
   }
-  console.log(palavraLista)
+  
   document.querySelector(".conteudo").style.display = "grid"
   document.querySelector(".menu").style.display = "none"
-  console.log(plsecreta[coluna][linha])
   criarLista()
   addButtaoTentativas();
   addButtaoLetras();
@@ -207,7 +204,6 @@ function retirar(num){
 
 function acertouUmLetra(){
   let letrasCorr = plsecreta[coluna][linha].split('');
-  console.log(letrasCorr)
   for(let i=0;i<palavraLista.length;i++){
     if(palavraLista[i].toUpperCase() === letrasCorr[i].toUpperCase()){
       let linha = vrfDeLinha()
@@ -216,7 +212,6 @@ function acertouUmLetra(){
       botao.style.backgroundColor = "rgb(39, 182, 29)";
       botao.style.color = "rgb(0, 0, 0)";
       let botoesop = document.querySelectorAll(".letras");
-      console.log(botoesop)
       let j = 0;
       botoesop.forEach(letras =>{
         if((letras.innerHTML).toUpperCase() === (palavraLista[i]).toUpperCase()){
@@ -233,7 +228,6 @@ function acertouUmLetra(){
 function acertouUmLetraPsErrada(){
   let letrastent = palavraLista // lista tentiva
   let letrasCorr = plsecreta[coluna][linha].split(''); // palavra certa
-  console.log(letrasCorr)
   for(let i =0;i<palavraLista.length;i++){
     if(letrastent[i].toUpperCase() === letrasCorr[i].toUpperCase()){
       letrastent[i] = "-1"
@@ -253,7 +247,6 @@ function acertouUmLetraPsErrada(){
       botao.style.backgroundColor = "rgb(246, 255, 0)";
       botao.style.color = "rgb(0, 0, 0)";
       let botoesop = document.querySelectorAll(".letras");
-      console.log(botoesop)
       let j = 0;
       botoesop.forEach(letras =>{
         if((letras.innerHTML).toUpperCase() === (letrastent[i]).toUpperCase() && letras.style.backgroundColor !=="rgb(39, 182, 29)"){
@@ -267,7 +260,6 @@ function acertouUmLetraPsErrada(){
     }
     else{
       let botoesop = document.querySelectorAll(".letras");
-      console.log(botoesop)
       let j = 0;
       botoesop.forEach(letras =>{
         if((letras.innerHTML).toUpperCase() === (letrastent[i]).toUpperCase() && letras.style.backgroundColor !=="rgb(39, 182, 29)"){
@@ -298,8 +290,6 @@ function errou(){
 
 function acertou(){
   let linha = vrfDeLinha();
-  console.log(linha)
-
   butoes = linha.querySelectorAll(".tentativasLetra").forEach(botao =>{
     botao.style.backgroundColor = "rgb(39, 182, 29)";
     botao.style.borderColor = "white";
